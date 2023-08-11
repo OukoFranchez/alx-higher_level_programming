@@ -18,10 +18,10 @@ if __name__ == "__main__":
     b = int(argv[3])
 
     if argv[2] == "+":
-        print(a, argv[2], b, "=", add(a, b))
+        print("{} {} {} {} {}".format(a, argv[2], b, "=", add(a, b)))
     elif argv[2] == "-":
-        print(a, argv[2], b, "=", sub(a, b))
+        print("{} {} {} {} {}".format(a, argv[2], b, "=", sub(a, b)))
     elif argv[2] == "*":
-        print(a, argv[2], b, "=", mul(a, b))
+        print("{} {} {} {} {}".format(a, argv[2], b, "=", mul(a, b)))
     else:
-        print(a, argv[2], b, "=", div(a, b))
+        print("{} {} {} {} {}".format(a, argv[2], b, "=", div(a, b)))
