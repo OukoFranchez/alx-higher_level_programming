@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from sys import exc_info, stderr
+from sys import stderr
 
 
 def safe_function(fct, *args):
