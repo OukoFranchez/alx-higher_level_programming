@@ -4,7 +4,8 @@
 
 class Square:
     """
-    Represents a square and provides methods to calculate its area and compare it with other squares.
+    Represents a square and provides methods to calculate
+    its area and compare it with other squares.
 
     Attributes:
         size (int): The size of the square.
@@ -88,19 +89,22 @@ class Square:
             other (Square): The other square to compare with.
 
         Returns:
-            bool: True if the area is less than the other square's area, False otherwise.
+            bool: True if the area is less than the other square's area,
+            False otherwise.
         """
         return self.area() < other.area()
 
     def __le__(self, other):
         """
-        Compare the area of the square with another square for less than or equal to.
+        Compare the area of the square with
+        another square for less than or equal to.
 
         Args:
             other (Square): The other square to compare with.
 
         Returns:
-            bool: True if the area is less than or equal to the other square's area, False otherwise.
+            bool: True if the area is less than or equal
+            to the other square's area, False otherwise.
         """
         return self.area() <= other.area()
 
@@ -112,18 +116,21 @@ class Square:
             other (Square): The other square to compare with.
 
         Returns:
-            bool: True if the area is greater than the other square's area, False otherwise.
+            bool: True if the area is greater than
+            the other square's area, False otherwise.
         """
         return self.area() > other.area()
 
     def __ge__(self, other):
         """
-        Compare the area of the square with another square for greater than or equal to.
+        Compare the area of the square with another
+        square for greater than or equal to.
 
         Args:
             other (Square): The other square to compare with.
 
         Returns:
-            bool: True if the area is greater than or equal to the other square's area, False otherwise.
+            bool: True if the area is greater than or
+            equal to the other square's area, False otherwise.
         """
         return self.area() >= other.area()

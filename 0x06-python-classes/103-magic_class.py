@@ -2,10 +2,13 @@
 """Define a MagicClass matching exactly a bytecode provided by Holberton."""
 
 import math
+
+
 class MagicClass:
     """Represent a circle.
 
-    This class provides methods to calculate the area and circumference of a circle.
+    This class provides methods to calculate
+    the area and circumference of a circle.
 
     Attributes:
         __radius (float or int): The radius of the circle.

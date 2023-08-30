@@ -11,7 +11,8 @@ class Square:
         position (tuple): The position of the square.
 
     Methods:
-        __init__(self, size=0, position=(0, 0)): Initializes a new square with the given size and position.
+        __init__(self, size=0, position=(0, 0)): Initializes a new square
+        with the given size and position.
         size: Property getter and setter for the size of the square.
         position: Property getter and setter for the position of the square.
         area(self): Returns the area of the square.
