@@ -4,7 +4,7 @@ from sys import argv
 
 if __name__ == "__main__":
     if len(argv) != 4:
-        # print("Usage:", argv[0], "<a> <operator> <b>")
+        print("Usage:", argv[0], "<a> <operator> <b>")
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         quit(1)
 
