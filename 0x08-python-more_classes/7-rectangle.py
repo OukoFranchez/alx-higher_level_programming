@@ -121,7 +121,6 @@ class Rectangle:
             rectangle = [row] * self.__height
             return '\n'.join(rectangle)
 
-
     def __repr__(self):
         """
         Return a string Representation of the rectangle
