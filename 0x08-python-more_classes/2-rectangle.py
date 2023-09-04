@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module provides class for task 0
+"""This module provides class for task 2
 classes:
     Rectangle - defines a Rectangle
     """
