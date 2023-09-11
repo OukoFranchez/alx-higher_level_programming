@@ -4,7 +4,8 @@
 
 class BaseGeometry:
     """
-    This is the BaseGeometry class, which serves as a template for creating other geometry classes.
+    This is the BaseGeometry class, which serves as
+    a template for creating other geometry classes.
 
     Example Usage:
     ```
