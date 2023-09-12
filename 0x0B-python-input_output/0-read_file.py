@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module for task 1"""
+"""Module for task 0"""
 
 
 def read_file(filename=""):
@@ -13,9 +13,6 @@ def read_file(filename=""):
     Returns:
         None
     """
-    try:
-        with open(filename, "r", encoding="utf-8") as file:
-            for line in file:
-                print(line, end='')
-    except FileNotFoundError:
-        pass
+    with open(filename, "r", encoding="utf-8") as file:
+        for line in file:
+            print(line, end='')
