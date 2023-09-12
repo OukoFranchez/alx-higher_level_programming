@@ -22,8 +22,8 @@ class BaseGeometry:
         """
         raise Exception("area() is not implemented")
 
-    @staticmethod
-    def integer_validator(name, value):
+    # @staticmethod
+    def integer_validator(self, name, value):
         """
         Validates that a given value is an integer and greater than zero.
         Args:
