@@ -4,7 +4,7 @@
 from json import loads
 
 
-def to_json_string(my_str):
+def from_json_string(my_str):
     """
     Convert a string into a JSON object.
 
