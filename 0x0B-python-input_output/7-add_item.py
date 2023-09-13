@@ -20,8 +20,10 @@ def save_to_json_file(my_obj, filename):
     Example:
         save_to_json_file(my_obj, "output.json")
 
-    This function opens the file specified by `filename` in write mode with UTF-8 encoding.
-    It uses the `dump` function from the `json` module to write the JSON representation of `my_obj` to the file.
+    This function opens the file specified by `filename` in
+    write mode with UTF-8 encoding.
+    It uses the `dump` function from the `json` module
+    to write the JSON representation of `my_obj` to the file.
     """
     # Open the file in write mode with UTF-8 encoding
     with open(filename, 'w', encoding='utf-8') as f:
