@@ -13,7 +13,8 @@ if (argCount <= 2) {
   console.log('No argument');
 } else {
   // Print each argument
-  for (let index = 2; index < argCount; index++) {
-    console.log(`${process.argv[index]}`);
-  }
+  // for (let index = 2; index < argCount; index++) {
+  //   console.log(`${process.argv[index]}`);
+  // }
+  console.log('', process.argv[2]);
 }
