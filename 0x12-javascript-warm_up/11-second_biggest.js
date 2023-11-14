@@ -5,12 +5,12 @@ if (process.argv.length <= 2 || process.argv[2] === 1) {
   console.log(0);
 } else {
   // Initialize the two largest variables
-  let largest = Number(process.argv[2]);
-  let secondLargest = Number(process.argv[3]);
+  let largest = parseInt(process.argv[2], 10);
+  let secondLargest = parseInt(process.argv[3], 10);
 
   // Iterate through the command-line arguments starting from index 3
   for (let i = 3; i < process.argv.length; i++) {
-    const currentNumber = Number(process.argv[i]);
+    const currentNumber = parseInt(process.argv[i], 10);
 
     // Update largest and second largest values
     if (currentNumber > largest) {
