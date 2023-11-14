@@ -1,13 +1,12 @@
 #!/usr/bin/node
-const myObject = {
+let myObject = {
   type: 'object',
   value: 12
 };
 console.log(myObject);
 
-myObject.type = typeof (myObject);
-myObject.incr = function incr () {
-  myObject.value++;
+myObject.incr = function () {
+  this.value++;
 };
 
 myObject.incr();
