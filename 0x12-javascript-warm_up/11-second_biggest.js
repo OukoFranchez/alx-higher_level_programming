@@ -1,26 +1,30 @@
 #!/usr/bin/node
 
-// Check if there are no arguments or only one argument
-if (process.argv.length <= 2 || process.argv[2] === 1) {
+if (process.argv.length < 4) {
   console.log(0);
 } else {
-  // Initialize the two largest variables
-  let largest = parseInt(process.argv[2], 10);
-  let secondLargest = parseInt(process.argv[3], 10);
+  console.log(findSecondBiggest(process.argv));
+}
 
-  // Iterate through the command-line arguments starting from index 3
-  for (let i = 3; i < process.argv.length; i++) {
-    const currentNumber = parseInt(process.argv[i], 10);
+function findSecondBiggest (arr) {
+  let first, second;
 
-    // Update largest and second largest values
-    if (currentNumber > largest) {
-      secondLargest = largest;
-      largest = currentNumber;
-    } else if (currentNumber > secondLargest && currentNumber !== largest) {
-      secondLargest = currentNumber;
-    }
+  if (parseInt(arr[2]) >= parseInt(arr[3])) {
+    first = parseInt(arr[2]);
+    second = parseInt(arr[3]);
+  } else {
+    first = parseInt(arr[3]);
+    second = parseInt(arr[2]);
   }
 
-  // Output the second largest integer
-  console.log(secondLargest);
+  for (let i = 4; i < arr.length; ++i) {
+    const current = parseInt(arr[i]);
+    if (current > first) {
+      second = first;
+      first = current;
+    } else if (current > second) {
+      second = current;
+    }
+  }
+  return second;
 }
