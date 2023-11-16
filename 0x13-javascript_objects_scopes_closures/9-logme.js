@@ -1,7 +1,9 @@
 #!/usr/bin/node
 
+let count = 0;
+
 exports.logMe = function (item) {
-  if (this.count === undefined) { this.count = 0; } else { this.count++; }
-  const line = this.count + ':' + item;
-  console.log(line);
+  console.log(`${count}: ${item}`);
+  count++;
 };
+
