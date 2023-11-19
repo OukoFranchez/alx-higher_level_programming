@@ -12,4 +12,4 @@ if __name__ == "__main__":
     cur = database.cursor()
     cur.execute("SELECT * FROM states ORDER BY id")
     for row in cur.fetchall():
-            print(row)
+        print(row)
