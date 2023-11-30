@@ -3,34 +3,39 @@
 Module for task 6
 """
 
-def find_peak(list_int):
+
+def find_peak(list_of_integers):
     """
-    Find the peak in a list of integers.
+    Return a peak in a list of unsorted integers.
 
     Args:
-        list_int (list): List of integers.
+        list_of_integers (list): List of unsorted integers.
 
     Returns:
         int or None: Peak element if found, None otherwise.
     """
     # Check for an empty list
-    if list_int == []:
+    if list_of_integers == []:
         return None
+
+    size = len(list_of_integers)
+
     # Check for a single-element list
-    elif len(list_int) == 1:
-        return list_int[0]
+    if size == 1:
+        return list_of_integers[0]
     # Check for a two-element list
-    elif len(list_int) == 2:
-        return list_int[0] if list_int[0] > list_int[1] else list_int[1]
+    elif size == 2:
+        return max(list_of_integers)
+
+    mid = int(size / 2)
+    peak = list_of_integers[mid]
+
+    # Check if the middle element is a peak
+    if peak > list_of_integers[mid - 1] and peak > list_of_integers[mid + 1]:
+        return peak
+    # If the peak is on the left side, recurse on the left sub-list
+    elif peak < list_of_integers[mid - 1]:
+        return find_peak(list_of_integers[:mid])
+    # If the peak is on the right side, recurse on the right sub-list
     else:
-        # Iterate through the list
-        for i in range(1, (len(list_int) + 1) // 2):
-            back = len(list_int) - i - 1
-            # Check if the current element is a peak
-            if list_int[i] >= list_int[i - 1] and list_int[i] >= list_int[i + 1]:
-                return list_int[i]
-            # Check if the corresponding element from the end is a peak
-            elif list_int[back] >= list_int[back - 1] and list_int[back] >= list_int[back + 1]:
-                return list_int[back]
-    # No peak found
-    return None
+        return find_peak(list_of_integers[mid + 1:])
